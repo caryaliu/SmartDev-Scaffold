@@ -52,16 +52,16 @@ configurations {
 
 dependencies {
 
-    compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'org.slf4j:slf4j-api:1.7.5'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.slf4j:slf4j-api:1.7.5'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    testCompile('org.springframework.boot:spring-boot-starter-test') {
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.1'
-    compile ('org.fisco-bcos.java-sdk:fisco-bcos-java-sdk:3.0.0'){
+    implementation ('org.fisco-bcos.java-sdk:fisco-bcos-java-sdk:3.8.0'){
         exclude group: 'org.slf4j'
     }
 }
